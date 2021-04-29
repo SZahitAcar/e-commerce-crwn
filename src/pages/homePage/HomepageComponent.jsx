@@ -5,7 +5,7 @@ import "../homePage/homepage.styles.scss";
 export const HomepageComponent = () => {
     return (
         <div className="homepage">
-            <DirectoryComponent/>
+            <DirectoryComponent />
         </div>
     )
 }
