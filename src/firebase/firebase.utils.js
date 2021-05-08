@@ -12,6 +12,15 @@ const config = {
   measurementId: "G-T57D736GTT",
 };
 
+export const createUserProfileDocument = async ({
+  userAuth,
+  additionalData,
+}) => {
+  if (!userAuth) return;
+
+  console.log(firestore.doc(""));
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
