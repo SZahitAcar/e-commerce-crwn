@@ -50,7 +50,7 @@ export default class SignInComponent extends Component {
                     
                 <div className="buttons">
                     <ButtonComponent type="submit" onSubmit={this.handleSubmit} > SIGN IN</ButtonComponent>
-                    <ButtonComponent  onClick={signInWithGoogle} isGoogleSignIn >
+                    <ButtonComponent type="button" onClick={signInWithGoogle} isGoogleSignIn >
                         SIGN IN WITH GOOGLE
                     </ButtonComponent>
                 </div>
