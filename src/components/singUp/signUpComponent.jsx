@@ -1,7 +1,7 @@
 import React from "react";
 
-import FormInput from "../formInput/FormInputComponent"
-import ButtonComponent from "../button/ButtonComponent"
+import {FormInputComponent} from "../formInput/FormInputComponent"
+import {ButtonComponent} from "../button/ButtonComponent"
 
 import {auth, createUserProfileDocument} from "../../firebase/firebase.utils"
 
@@ -24,7 +24,7 @@ class SignUpComponent extends React.Component {
 
         const {displayName,email,password,confirmPassword} = this.state
 
-        if(password != confirmPassword) {
+        if(password !== confirmPassword) {
             alert("Passwords don't match!");
             return
         } 
@@ -57,8 +57,8 @@ class SignUpComponent extends React.Component {
             <div className="sign-up">
                 <h2 className="title"> I do not have a account</h2>
                 <span> Sign up with yout email and password</span>
-                <form className="sign-up-form" onSubmit={this.handleSubmit}></form>
-                <FormInput 
+                <form className="sign-up-form" onSubmit={this.handleSubmit}>
+                <FormInputComponent 
                 type="text"
                 name="displayName"
                 value={displayName}
@@ -66,9 +66,9 @@ class SignUpComponent extends React.Component {
                 label="Display Name"
                 required
                 >
-                </FormInput>
+                </FormInputComponent>
 
-                <FormInput 
+                <FormInputComponent 
                 type="email"
                 name="email"
                 value={email}
@@ -76,9 +76,9 @@ class SignUpComponent extends React.Component {
                 label="Email"
                 required
                 >
-                </FormInput>
+                </FormInputComponent>
 
-                <FormInput 
+                <FormInputComponent
                 type="password"
                 name="password"
                 value={password}
@@ -86,9 +86,9 @@ class SignUpComponent extends React.Component {
                 label="Password"
                 required
                 >
-                </FormInput>
+                </FormInputComponent>
 
-                <FormInput 
+                <FormInputComponent
                 type="password"
                 name="confirmPassword"
                 value={confirmPassword}
@@ -96,9 +96,11 @@ class SignUpComponent extends React.Component {
                 label="Confirm Password"
                 required
                 >
-                </FormInput>
+                </FormInputComponent>
 
-                <ButtonComponent type="submit"> SIGN UP </ButtonComponent>
+                <ButtonComponent type="submit"> Sign Up</ButtonComponent>
+                </form>
+               
         </div>
         )  
     }

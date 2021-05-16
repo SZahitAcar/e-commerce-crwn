@@ -10,3 +10,4 @@ export const ButtonComponent = ({children, isGoogleSignIn, ...otherProps}) => {
         </div>
     )
 }
+
